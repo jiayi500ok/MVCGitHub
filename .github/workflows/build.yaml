@@ -7,15 +7,15 @@ jobs:
     runs-on: ubuntu-latest
 
 steps:
--name: setup dotnet sdk
+- name: setup dotnet sdk
 - uses: actions/setup-dotnet@v3
   with:
     dotnet-version: '6.0.x'
--name: checkout your source
+- name: checkout your source
   uses: actions/checkout@v3
--name: list your repo
+- name: list your repo
   run: ls -LR TestGitHub/bin
--name: build app
+- name: build app
   run: dotnet build 
--name: List files after build
+- name: List files after build
   run: ls -LR TestGitHub/bin
